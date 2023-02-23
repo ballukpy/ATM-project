@@ -292,7 +292,7 @@ class ATM:                                                         #yek class ba
             while True:                            #dar inja bad chap meno card be card karbar ra baraye edame amaliyat rahnomayi mikonim 
                 gozine_card_be_card=int(input("gozine mored nazar khodra entekhab konid\n---> ")) 
                 if len(str(gozine_card_be_card)) ==1 :
-                    if 0 < int(gozine_card_be_card) < 4:
+                    if 0 < int(gozine_card_be_card) < 5:
                         break                                             
                     else:
                         print("lotafan az adad gozine haye meno entekhab konid")
@@ -361,13 +361,15 @@ class ATM:                                                         #yek class ba
                                         self.card_be_card()
                             else:
                                 print("$$$ mablag entegali az mojodi shoma bishtar ast $$$")
+                                self.card_be_card()
                         else:
                             print("^^^ lotfan ragam mored nazar ra vared konid ^^^^")
         except:
             print("type:restart_card_be_card :!!!!!!!!!! lotfan dar vared kardan adad degat konid va fagat adad vared konid !!!!!!!!!!")
             self.card_be_card()
 
-    def mosabge(self):      #finction mosabage yek mosabege koshak ba adad hast baraye sargarmi tarrahi shode
+    def mosabge(self):      #function mosabage yek mosabege koshak ba adad hast baraye sargarmi tarrahi shode
+        """faliyat 6 ostad"""
         try:
             emtiyaz_user=0
             emtiyaz_pc=0
@@ -443,7 +445,7 @@ class ATM:                                                         #yek class ba
             print("type:restart_mosabage lotfan az adad khaste shode entekhab konid")
             self.mosabge()
 
-    def help(self):
+    def help(self):          #function for HELP
         print(" :) ba salam be ATM BALLUK khosh omadin. ")
         print()
         print(" :) kar kardan ba in ATM kheyli rahat hast. ")
